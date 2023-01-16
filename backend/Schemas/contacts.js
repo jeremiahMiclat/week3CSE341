@@ -1,25 +1,25 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-    firstName:{
+    firstName: {
         type: String,
-        required:true
+        required: true
     },
-    lastName:{
+    lastName: {
         type: String,
-        required:true
+        required: true
     },
-    email:{
+    email: {
         type: String,
-        required:true
+        required: true
     },
-    favoriteColor:{
+    favoriteColor: {
         type: String,
-        required:true
+        required: true
     },
-    birthday:{
+    birthday: {
         type: Date,
-        required:true
+        required: true
     }
 })
 

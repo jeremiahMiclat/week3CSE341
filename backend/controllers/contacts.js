@@ -48,7 +48,7 @@ const updateOne = async (req, res) => {
         birthday: req.body.birthday,
     })
     try {
-        const updatedContact = await schema.findByIdAndUpdate(req.params.id, {$set:contact}, { new: true })
+        const updatedContact = await schema.findByIdAndUpdate(req.params.id, { $set: contact }, { new: true })
         res.status(200).json(updatedContact)
 
     } catch (e) {
