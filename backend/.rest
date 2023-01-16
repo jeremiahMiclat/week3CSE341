@@ -1,0 +1,26 @@
+//index
+GET http://localhost:8080
+
+### get all
+GET http://localhost:8080/contacts
+
+### get by id
+GET http://localhost:8080/contacts/63c5d13a32a82650c2098be1
+
+
+### post
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{"firstName":"pudge2","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+
+### update
+PUT http://localhost:8080/contacts/63c5d13a32a82650c2098be1
+Content-Type: application/json
+
+{"firstName":"slark","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+
+
+### delete
+DELETE http://localhost:8080/contacts/63c5dc82dedffb709e0a7f22
+
