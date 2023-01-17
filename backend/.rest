@@ -1,26 +1,54 @@
 //index
 GET http://localhost:8080
 
-### get all
+### get all contacts
 GET http://localhost:8080/contacts
 
-### get by id
+### get contacts by ID
 GET http://localhost:8080/contacts/63c5d13a32a82650c2098be1
 
 
-### post
+### add one contact
 POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {"firstName":"pudge2","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
 
-### update
+### update a contact
 PUT http://localhost:8080/contacts/63c5d13a32a82650c2098be1
 Content-Type: application/json
 
 {"firstName":"slark","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
 
 
-### delete
+### delete a contact
 DELETE http://localhost:8080/contacts/63c5dc82dedffb709e0a7f22
 
+
+### Render
+
+//index
+GET https://cse341week3.onrender.com
+
+### get all contacts
+GET https://cse341week3.onrender.com/contacts
+
+### get contacts by ID
+GET https://cse341week3.onrender.com/contacts/63c5d13a32a82650c2098be1
+
+
+### add one contact
+POST https://cse341week3.onrender.com/contacts
+Content-Type: application/json
+
+{"firstName":"pudge2","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+
+### update a contact
+PUT https://cse341week3.onrender.com/contacts/63c5d13a32a82650c2098be1
+Content-Type: application/json
+
+{"firstName":"slark","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+
+
+### delete a contact
+DELETE https://cse341week3.onrender.com/contacts/63c5dc82dedffb709e0a7f22
