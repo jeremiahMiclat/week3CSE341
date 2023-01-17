@@ -34,21 +34,21 @@ GET https://cse341week3.onrender.com
 GET https://cse341week3.onrender.com/contacts
 
 ### get contacts by ID
-GET https://cse341week3.onrender.com/contacts/63c5d13a32a82650c2098be1
+GET https://cse341week3.onrender.com/contacts/63c5e75f5fa75ccb9ed64503
 
 
 ### add one contact
 POST https://cse341week3.onrender.com/contacts
 Content-Type: application/json
 
-{"firstName":"pudge2","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+{"firstName":"pudge3","lastName":"luna3","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
 
 ### update a contact
-PUT https://cse341week3.onrender.com/contacts/63c5d13a32a82650c2098be1
+PUT https://cse341week3.onrender.com/contacts/63c5e75f5fa75ccb9ed64503
 Content-Type: application/json
 
-{"firstName":"slark","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
+{"firstName":"slarkee","lastName":"luna","email":"pudgy@email.com","favoriteColor":"brown","birthday":"03/31/2022"}
 
 
 ### delete a contact
-DELETE https://cse341week3.onrender.com/contacts/63c5dc82dedffb709e0a7f22
+DELETE https://cse341week3.onrender.com/contacts/63c5e75f5fa75ccb9ed64503
