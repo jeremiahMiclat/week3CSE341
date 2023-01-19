@@ -1,4 +1,7 @@
+/* eslint-disable no-underscore-dangle */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const dotenv = require('dotenv')
+
 dotenv.config()
 const mongooseDb = require('mongoose')
 

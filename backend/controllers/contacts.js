@@ -1,29 +1,28 @@
-const e = require('express')
-const schema = require('../Schemas/contacts')
+const Schema = require('../Schemas/contacts')
 
-//fetch all
+// fetch all
 const getData = async (req, res) => {
     try {
-        const contacts = await schema.find()
+        const contacts = await Schema.find()
         res.status(200).json(contacts)
 
     } catch (e) {
         return res.status(500).json({ message: e.message })
     }
 }
-//fetch by id
+// fetch by id
 const getOne = async (req, res) => {
     try {
-        const contacts = await schema.findById(req.params.id)
+        const contacts = await Schema.findById(req.params.id)
         res.status(200).json(contacts)
 
     } catch (e) {
         return res.status(500).json({ message: e.message })
     }
 }
-//create
+// create
 const addOne = async (req, res) => {
-    const contact = new schema({
+    const contact = new Schema({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
@@ -37,9 +36,9 @@ const addOne = async (req, res) => {
         res.status(500).json({ message: e.message })
     }
 }
-//update
+// update
 const updateOne = async (req, res) => {
-    const contact = new schema({
+    const contact = new Schema({
         _id: req.params.id,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -48,17 +47,17 @@ const updateOne = async (req, res) => {
         birthday: req.body.birthday,
     })
     try {
-        const updatedContact = await schema.findByIdAndUpdate(req.params.id, { $set: contact }, { new: true })
+        const updatedContact = await Schema.findByIdAndUpdate(req.params.id, { $set: contact }, { new: true })
         res.status(200).json(updatedContact)
 
     } catch (e) {
         return res.status(500).json({ message: e.message })
     }
 }
-//delete
+// delete
 const delOne = async (req, res) => {
     try {
-        const removedContact = await schema.deleteOne({ _id: req.params.id })
+        const removedContact = await Schema.deleteOne({ _id: req.params.id })
         res.status(200).json(removedContact)
 
     } catch (e) {
