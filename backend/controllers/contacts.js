@@ -48,7 +48,7 @@ const updateOne = async (req, res) => {
     })
     try {
         const updatedContact = await Schema.findByIdAndUpdate(req.params.id, { $set: contact }, { new: true })
-        res.status(200).json(updatedContact)
+        res.status(204).json(updatedContact)
 
     } catch (e) {
         return res.status(500).json({ message: e.message })
