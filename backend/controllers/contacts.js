@@ -31,7 +31,8 @@ const addOne = async (req, res) => {
     })
     try {
         const savedContact = await contact.save()
-        res.status(201).json(savedContact)
+        // eslint-disable-next-line no-underscore-dangle
+        res.status(201).json(savedContact._id)
     } catch (e) {
         res.status(500).json({ message: e.message })
     }
