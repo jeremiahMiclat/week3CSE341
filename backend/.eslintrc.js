@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     'consistent-return': 0,
-    'no-console': 0
+    'no-console': 0,
+    'import/no-extraneous-dependencies': 0
   },
 };
