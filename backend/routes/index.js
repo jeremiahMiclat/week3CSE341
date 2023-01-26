@@ -4,6 +4,8 @@ const router = express.Router()
 const contactsRouter = require('./contacts')
 
 router.get('/', (req, res) => {
+    // #swagger.tags = ['Homepage']
+    // #swagger.description = 'Home endpoint.'
     res.send('Week 3 Personal Assignment')
 })
 
