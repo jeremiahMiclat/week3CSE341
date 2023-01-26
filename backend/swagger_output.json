@@ -24,18 +24,11 @@
     "application/json"
   ],
   "paths": {
-    "/": {
+    "/api-docs": {
       "get": {
-        "tags": [
-          "Homepage"
-        ],
-        "description": "Home endpoint.",
+        "description": "",
         "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": {}
       }
     },
     "/contacts/": {
