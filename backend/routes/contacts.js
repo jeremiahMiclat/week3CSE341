@@ -4,7 +4,7 @@ const router = express.Router()
 const controller = require('../controllers/contacts')
 
 // get all contacts
-router.get('/', controller.getData)
+router.get('/', controller.getAll)
 // get one contact
 router.get('/:id', controller.getOne)
 // create contact

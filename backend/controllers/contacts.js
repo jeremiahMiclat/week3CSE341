@@ -1,7 +1,7 @@
 const Schema = require('../Schemas/contacts')
 
 // fetch all
-const getData = async (req, res) => {
+const getAll = async (req, res) => {
     try {
         // #swagger.tags = ['Contacts']
         // #swagger.description = 'Displays all contacts.'
@@ -108,4 +108,4 @@ const delOne = async (req, res) => {
 
 
 
-module.exports = { getData, getOne, addOne, updateOne, delOne }
+module.exports = { getAll, getOne, addOne, updateOne, delOne }
