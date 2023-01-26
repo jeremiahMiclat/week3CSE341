@@ -1,18 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const swaggerUi = require('swagger-ui-express')
+// const swaggerUi = require('swagger-ui-express')
 const mongoose = require('./db/connect');
 const routes = require('./routes');
-const swaggerFile = require('./swagger_output.json')
+// const swaggerFile = require('./swagger_output.json')
 
 const port = process.env.PORT || 8080;
 const app = express();
 
 app
-    .use('/docs-api', swaggerUi.serve, swaggerUi.setup(swaggerFile))
     .use(bodyParser.json())
     .use((req, res, next) => {
         res.setHeader('Acess-Control-Allow-Origin', '*');
+        res.setHeader(
+            'Access-Control-Allow-Headers',
+            'Origin, X-Requested-Width, Content-Type, Accept, Z-Key'
+        )
+        res.setHeader('Content-Type', 'application/json')
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
         next();
     })
     .use(routes);
